@@ -2,6 +2,8 @@ package entity;
 
 import java.util.Objects;
 
+import enums.LoaiVe;
+
 public class VeTau {
 	private String maVe;
 	private KhachHang khachHang;

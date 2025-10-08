@@ -1,4 +1,4 @@
-package entity;
+package enums;
 
 public enum LoaiVe {
 	VE_BINH_THUONG,
