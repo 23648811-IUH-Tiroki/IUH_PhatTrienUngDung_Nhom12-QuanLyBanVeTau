@@ -4,44 +4,51 @@ import java.util.Objects;
 
 public class KhachHang {
 	private String maKH;
-	private String tenKH;
-	private String soCMND;
+	private String tenKhachHang;
+	private String soCCCD;
 	private String hoChieu;
+	private String soDienThoai;
+	private boolean laNguoiMuaVe = true;
+	private String email;
+	private String diaChi;
 	
-	public KhachHang() {
-		super();
+	
+	public KhachHang(String soCCCD_HoChieu, String tenKhachHang, boolean laNguoiNuocNgoai, String soDienThoai, String email, String diaChi) {
+		this.tenKhachHang = tenKhachHang;
+		this.soDienThoai = soDienThoai;
+		if (laNguoiNuocNgoai == true) this.hoChieu = soCCCD_HoChieu;
+		else this.soCCCD = soCCCD_HoChieu;
+		this.email = email;
+		this.diaChi = diaChi;
 	}
 
-	public KhachHang(String maKH, String tenKH, String soCMND, String hoChieu) {
-		super();
-		this.maKH = maKH;
-		this.tenKH = tenKH;
-		this.soCMND = soCMND;
-		this.hoChieu = hoChieu;
+	
+	public KhachHang(String soCCCD_HoChieu, String tenKhachHang, boolean laNguoiNuocNgoai, String soDienThoai, boolean laNguoiMuaVe) {
+		this.tenKhachHang = tenKhachHang;
+		this.soDienThoai = soDienThoai;
+		if (laNguoiNuocNgoai == true) this.hoChieu = soCCCD_HoChieu;
+		else this.soCCCD = soCCCD_HoChieu;
+		this.laNguoiMuaVe = laNguoiMuaVe;
 	}
 
 	public String getMaKH() {
 		return maKH;
 	}
 
-	public void setMaKH(String maKH) {
-		this.maKH = maKH;
+	public String getTenKhachHang() {
+		return tenKhachHang;
 	}
 
-	public String getTenKH() {
-		return tenKH;
+	public void setTenKhachHang(String tenKhachHang) {
+		this.tenKhachHang = tenKhachHang;
 	}
 
-	public void setTenKH(String tenKH) {
-		this.tenKH = tenKH;
+	public String getSoCCCD() {
+		return soCCCD;
 	}
 
-	public String getSoCMND() {
-		return soCMND;
-	}
-
-	public void setSoCMND(String soCMND) {
-		this.soCMND = soCMND;
+	public void setSoCCCD(String soCCCD) {
+		this.soCCCD = soCCCD;
 	}
 
 	public String getHoChieu() {
@@ -51,7 +58,31 @@ public class KhachHang {
 	public void setHoChieu(String hoChieu) {
 		this.hoChieu = hoChieu;
 	}
-	
+
+	public String getSoDienThoai() {
+		return soDienThoai;
+	}
+
+	public void setSoDienThoai(String soDienThoai) {
+		this.soDienThoai = soDienThoai;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getDiaChi() {
+		return diaChi;
+	}
+
+	public void setDiaChi(String diaChi) {
+		this.diaChi = diaChi;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(maKH);
@@ -71,7 +102,7 @@ public class KhachHang {
 
 	@Override
 	public String toString() {
-		return "KhachHang [maKH=" + maKH + ", tenKH=" + tenKH + ", soCMND=" + soCMND + ", hoChieu=" + hoChieu + "]";
+		return "KhachHang [maKH=" + maKH + ", tenKhachHang=" + tenKhachHang + ", soCCCD=" + soCCCD + ", hoChieu=" + hoChieu + "]";
 	}
 	
 }
