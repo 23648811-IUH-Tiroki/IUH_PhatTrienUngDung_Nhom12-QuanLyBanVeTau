@@ -106,7 +106,7 @@ public class TrainCarApp extends Application {
             BerthNode node = new BerthNode(seatNumber, isSold, BerthNode.Type.SEAT, orientation);
             
             // Gắn sự kiện click, truyền vào INDEX của chỗ đó
-            node.setOnMouseClicked(event -> handleBerthClick(dataIndex));
+            node.setOnMouseClicked(_ -> handleBerthClick(dataIndex));
             
             int localIndex = i - startIndex;
             if (orientation == BerthNode.Orientation.LEFT) {
@@ -160,7 +160,7 @@ public class TrainCarApp extends Application {
         HBox buttonBox = new HBox(15, buyButton, cancelButton);
         buttonBox.setAlignment(Pos.CENTER);
 
-        buyButton.setOnAction(e -> {
+        buyButton.setOnAction(_ -> {
             // Kiểm tra lại dữ liệu trước khi thực hiện
             if (berthsState.get(dataIndex)) {
                 dialogStage.close();
@@ -181,7 +181,7 @@ public class TrainCarApp extends Application {
             javafx.application.Platform.runLater(() -> showAlert(Alert.AlertType.INFORMATION, "Thông báo", "Mua vé thành công cho chỗ số " + seatNumber + "!"));
         });
         
-        cancelButton.setOnAction(e -> dialogStage.close());
+        cancelButton.setOnAction(_ -> dialogStage.close());
         
         vbox.getChildren().addAll(infoLabel, buttonBox);
         Scene dialogScene = new Scene(vbox, 300, 150);
