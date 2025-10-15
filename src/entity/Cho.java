@@ -2,6 +2,8 @@ package entity;
 
 import java.util.Objects;
 
+import enums.LoaiCho;
+
 public class Cho {
     // Thuộc tính
     private String maCho;     // duy nhất (id)

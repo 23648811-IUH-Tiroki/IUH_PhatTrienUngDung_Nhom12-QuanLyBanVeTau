@@ -1,4 +1,4 @@
-package entity;
+package enums;
 
 public enum LoaiToa {
     // Các hằng số

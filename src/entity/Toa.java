@@ -2,6 +2,8 @@ package entity;
 
 import java.util.Objects;
 
+import enums.LoaiToa;
+
 public class Toa {
     // Thuộc tính
     private String maToa;    // duy nhất (id)
