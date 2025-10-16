@@ -1,20 +1,28 @@
 /* style.css (Phiên bản Sửa Lỗi và Tinh Chỉnh Cuối Cùng) */
 
+.root {
+	-carriage-color: #4a6c9b;
+}
+
+/* Khung toa */
+
 .carriage-title {
     -fx-font-family: "Arial";
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #4a6c9b;
+    -fx-text-fill: -carriage-color;
 }
 
 .train-carriage {
     -fx-background-color: white;
-    -fx-border-color: #4a6c9b;
+    -fx-border-color: -carriage-color;
     -fx-border-width: 3;
     -fx-border-radius: 10;
     -fx-background-radius: 20;
     -fx-padding: 5px 20px 5px 20px;
 }
+
+/* Toa ghế (chung) */
 
 .main-walkway {
     -fx-min-height: 12px;
@@ -31,32 +39,30 @@
     -fx-background-radius: 4;
 }
 
-/* === ĐỊNH DẠNG CHO MODULE "CHỖ" - ĐÃ SỬA LỖI === */
-
 /* Style chung cho một "Chỗ" */
+
 .berth {
-    -fx-min-width: 40px;
+    -fx-min-width: 35px;
     -fx-min-height: 35px;
-    -fx-max-width: 40px;
+    -fx-max-width: 35px;
     -fx-max-height: 35px;
     -fx-border-radius: 5;
     -fx-background-radius: 5;
 }
 
-/* Style cho label số ghế/giường */
 .berth-label {
     -fx-font-family: "Arial";
     -fx-font-size: 14px;
     -fx-font-weight: bold;
 }
 
-/* Style DUY NHẤT và NHẤT QUÁN cho lưng ghế */
-.seat-type .berth-back {
-    -fx-pref-width: 7px;
-    -fx-background-color: #8a865d; /* Luôn có màu xanh rêu */
-    -fx-background-radius: 3;
-}
+/* Style lưng ghế */
 
+.seat-type .berth-back {
+    -fx-pref-width: 5px;
+    -fx-background-color: #8a865d; /* Luôn có màu xanh rêu */
+    -fx-background-radius: 2;
+}
 
 /* --- CÁC TRẠNG THÁI --- */
 
@@ -91,17 +97,12 @@
     -fx-background-color: #f0f0f0;
 }
 
-/* Lưới chứa các giường */
-.beds-grid {
-    -fx-hgap: 5; /* Khoảng cách ngang giữa các giường */
-    -fx-vgap: 10; /* Khoảng cách dọc giữa các giường */
-}
-
 /* Nhãn tầng T1, T2, T3 */
 .tier-label {
     -fx-font-weight: bold;
     -fx-font-size: 14px;
     -fx-text-fill: #555;
+	-fx-alignment: center;
 }
 
 /* Nhãn Khoang 1, Khoang 2... */
@@ -113,7 +114,7 @@
 
 /* Vách ngăn giữa các khoang */
 .compartment-divider {
-    -fx-background-color: #4a6c9b; /* Màu xanh thân tàu */
+    -fx-background-color: -carriage-color; /* Màu xanh thân tàu */
     -fx-min-width: 4px;
     -fx-max-width: 4px;
 }
@@ -126,9 +127,9 @@
     -fx-background-color: transparent; /* Nền trong suốt */
     
     /* Tạo hình chữ U bằng border */
-    -fx-border-color: #4a6c9b; /* Màu xanh thân tàu */
-    -fx-border-width: 0 5 5 5; /* top right bottom left */
-    -fx-border-radius: 0 0 6 6;
+    -fx-border-color: -carriage-color; /* Màu xanh thân tàu */
+    -fx-border-width: 0 4 4 4; /* top right bottom left */
+    -fx-border-radius: 0 0 5 5;
     -fx-background-radius: 0 0 6 6;
 }
 
@@ -139,6 +140,6 @@
 
 /* GridPane cho mỗi khoang (2 cột x 3 hàng) */
 .compartment-pane {
-    -fx-hgap: 5;  /* Khoảng cách giữa 2 giường trong khoang */
-    -fx-vgap: 5; /* Khoảng cách giữa các tầng */
+    -fx-hgap: 20;  /* Khoảng cách giữa 2 giường trong khoang */
+    -fx-vgap: 10; /* Khoảng cách giữa các tầng */
 }

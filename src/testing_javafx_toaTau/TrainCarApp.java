@@ -16,15 +16,20 @@ public class TrainCarApp extends Application {
 	public void start(Stage primaryStage) {
 		// --- CHỌN TOA ĐỂ HIỂN THỊ ---
 
-		// 1. Tạo module cho toa ngồi mềm và build layout của nó
-		SoftSeatCarPane softSeatModule = new SoftSeatCarPane();
-		Node softSeatLayout = softSeatModule.buildLayout();
-		CarriageFrame frame = new CarriageFrame("Toa số 1: Ngồi mềm điều hòa", softSeatLayout);
+		// 1. Toa ngồi mềm
+//		SoftSeatCarPane softSeatModule = new SoftSeatCarPane();
+//		Node softSeatLayout = softSeatModule.buildLayout();
+//		CarriageFrame frame = new CarriageFrame("Toa số 1: Ngồi mềm", softSeatLayout);
 
-		// 2. Tạo module cho toa giường nằm (ví dụ 2 tầng) và build layout của nó
+		// 2. Ngồi cứng
+		HardSeatCarPane hardSeatModule = new HardSeatCarPane();
+		Node hardSeatLayout = hardSeatModule.buildLayout();
+		CarriageFrame frame = new CarriageFrame("Toa số 2: Ngồi cứng", hardSeatLayout);
+
+		// 3. Toa giường nằm (biến số chỉ số tầng từ 1-3)
 //		SleeperCarPane sleeperCarModule = new SleeperCarPane(3);
 //		Node sleeperCarLayout = sleeperCarModule.buildLayout();
-//		CarriageFrame frame = new CarriageFrame("Toa số 3: Giường nằm khoang 6 điều hòa", sleeperCarLayout);
+//		CarriageFrame frame = new CarriageFrame("Toa số 3: Giường nằm", sleeperCarLayout);
 
 		// --- Hiển thị ---
 		Scene scene = new Scene(frame);

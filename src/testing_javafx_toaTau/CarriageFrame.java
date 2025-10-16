@@ -13,8 +13,8 @@ import javafx.scene.layout.VBox;
  * dung sơ đồ toa vào.
  */
 public class CarriageFrame extends VBox {
-	private static final double FIXED_FRAME_HEIGHT = 200; // Chiều cao cố định cho khung xanh
-	private static final double FIXED_FRAME_WIDTH = 850; // Chiều rộng cố định cho khung xanh
+	private static final double FIXED_FRAME_HEIGHT = 190; // Chiều cao cố định cho khung xanh
+	private static final double FIXED_FRAME_WIDTH = 770; // Chiều rộng cố định cho khung xanh
 
 	private final Label titleLabel;
 	private final StackPane contentArea;

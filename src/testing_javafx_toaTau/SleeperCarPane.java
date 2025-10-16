@@ -190,9 +190,9 @@ public class SleeperCarPane {
 		VBox labels = new VBox();
 		// Thay đổi 1: Căn xuống dưới cùng
 		labels.setAlignment(Pos.BOTTOM_LEFT);
-		labels.setSpacing(20);
+		labels.setSpacing(25);
 		// Thay đổi 2: Xóa padding trên, thêm padding dưới để căn chỉnh
-		labels.setPadding(new Insets(0, 0, 10, 5));
+		labels.setPadding(new Insets(0, 0, 10, 0));
 
 		for (int i = numberOfTiers; i >= 1; i--) {
 			Label tierLabel = new Label("T" + i);

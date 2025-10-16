@@ -38,7 +38,7 @@ public class SoftSeatCarPane extends VBox {
 
 	public Node buildLayout() {
 		// trainCarriageLayout là VBox chứa sơ đồ ghế
-		trainCarriageLayout = new VBox(15); // CARRIAGE_GAP
+		trainCarriageLayout = new VBox(30); // CARRIAGE_GAP
 		trainCarriageLayout.setAlignment(Pos.CENTER);
 
 		// Vẽ giao diện lần đầu
@@ -52,11 +52,12 @@ public class SoftSeatCarPane extends VBox {
 
 		// Tạo lại nội dung từ dữ liệu với logic đánh số mới
 		HBox topSeatBlock = createSeatBlock(true);
-		Region mainWalkway = new Region();
-		mainWalkway.getStyleClass().add("main-walkway");
+//		Region mainWalkway = new Region();
+//		mainWalkway.getStyleClass().add("main-walkway");
 		HBox bottomSeatBlock = createSeatBlock(false);
 
-		trainCarriageLayout.getChildren().addAll(topSeatBlock, mainWalkway, bottomSeatBlock);
+//		trainCarriageLayout.getChildren().addAll(topSeatBlock, mainWalkway, bottomSeatBlock);
+		trainCarriageLayout.getChildren().addAll(topSeatBlock, bottomSeatBlock);
 	}
 
 	private HBox createSeatBlock(boolean isTopBlock) {
